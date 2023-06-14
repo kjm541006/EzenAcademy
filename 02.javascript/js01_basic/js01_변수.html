@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 한줄 주석
+      /*여러줄 주석*/
+      /*
+        A. javascript를 정의하는 방법
+          1. html파일의 script태그 안에 정의하는 방법
+            -스크립트블럭은 html파일 어디나 위치할 수 있다.
+            -하지만, 주의할 점은 html은 처음부터 순차적으로 실행된다.
+          2. html의 요소에 정의하는 방법 (inline)
+          3. 외부파일 정의하는 방법
+
+        B. javascript 기본문법
+          1. 자바스크립트는 실행문장 끝에 세미콜론으로 닫아줘야 함.
+          2. 변수 선언 방법
+            - 변수란 하나의 저장장소를 의미함
+            - 선언하는 방법은 var, let, const
+              - var은 제한 없이 변수를 재선언 및 값 변경이 가능
+              - let은 선언된 변수는 재선언할 수 없다. 값은 변경이 가능
+              - const는 선언된 변수는 재선언 및 값 변경 불가
+            - 변수 선언의 규칙
+              - 영어문자, 언더스코어(_), 숫자를 사용한다.
+              - 첫 글자는 반드시 영문자, 언더스코어, $기호로 시작해야 한다.
+              - JavaScript에서 사용하는 예약어(if, let, const, for등) 사용 불가
+              - 변수명은 Camel Case or Snake Case 사용
+              - 스타일가이드 규칙에 의거 작성하는 것이 관례
+                - 구글 자바스크립트 스타일 가이드: google.github.io/styleguide/jsguide.html
+              
+          3. 문자열의 선언은 큰 따옴표, 작은 따옴표 구분없이 정의가 가능하다.
+          4. 큰 따옴표안에는 큰 따옴표 또는 작은 따옴표 안에는 작은 따옴표를 사용불가
+            - 큰 따옴표안에는 작은 따옴표, 작은 따옴표 안에는 큰 따옴표를 사용
+            - 큰(작은) 따옴표 안에 큰(작은) 따옴표 사용하려면 이스케이프문자(\) 사용
+          5. 백틱(`)을 사용하여 문자열을 간단하게 표현할 수 있다.
+          6. 자바스크립트는 대소문자를 구분한다.
+            - sum, Sum, SUM 전부 서로 다른 변수이다.
+        
+        C. 이스케이프 문자(\)
+
+          \n: 줄바꿈
+          \t: tab키
+          \': 작은 따옴표
+          \": 큰 따옴표
+          \\: 역슬래쉬문자 즉 '\'문자 의미
+      */
+    </script>
+    <script>
+      // alert("1. 안녕하세요?? 반갑습니다?");
+      // alert("제이름은 홍길동 입니다.");
+      a = "홍길동";
+      // alert("제 이름은 " + a + " 입니다"); // + 숫자일 때는 더하기, 문자일때는 연결
+      // alert(`제 이름은 ${a} 입니다`);
+    </script>
+
+    <script>
+      // 실습문제.
+      // h1 tag: 제 이름은 본인이름 입니다.
+      // h3 tag: 나이는 99살 입니다.
+      // document.write, prompt를 이용해서 출력해 보기
+      // name, age 변수 각각 선언해서 prompt(메시지, 기본값); -> 이름과 나이를 전달 받아서 출력
+      // 1) 이용해서 이름과 나이를 전달 받아서 출력
+      // 2) console창에 출력
+
+      let name = prompt("이름을 입력해 주세요.", "홍길동");
+      let age = prompt("나이를 입력해 주세요.", 0);
+
+      document.write(`<h1>제 이름은 ${name} 입니다.</h1>`);
+      document.write(`<h3>나이는 ${age}세 입니다.</h3>`);
+      console.log(`제 이름은 ${name} 입니다.`);
+      console.log(`나이는 ${age}세 입니다.`);
+    </script>
+  </head>
+  <body>
+    <button onclick="alert('inline-javascript: Hello Javascript')">경고메시지</button>
+    <script src="./js/js01.js"></script>
+  </body>
+</html>

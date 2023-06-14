@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 18;
+      if (Number(num) % 2 === 0) document.write("짝수입니다!");
+      else document.write("홀수입니다!");
+
+      switch (num % 2 === 0) {
+        case 0:
+          document.write("짝수입니다!");
+          break;
+        case 1:
+          document.write("홀수입니다!");
+          break;
+        default:
+          document.write("숫자가 아닙니다");
+      }
+
+      // 실습1. switch: score를 입력받아서 95이상이면 'A+학점 입니다' 90이상이면 'A0학점입니다'
+      // 85 B+, 80 B0, 75 C+, 70 C0, 60이상 D학점, 60 미만이면 F학점 입니다.
+
+      let score = 95;
+      switch (true) {
+        case score >= 95:
+          document.write("<h3>A+학점 입니다.</h3>");
+          break;
+        case score >= 90:
+          document.write("<h3>A0학점 입니다.</h3>");
+          break;
+        case score >= 85:
+          document.write("<h3>B+학점 입니다.</h3>");
+          break;
+        case score >= 80:
+          document.write("<h3>B0학점 입니다.</h3>");
+          break;
+        case score >= 75:
+          document.write("<h3>C+학점 입니다.</h3>");
+          break;
+        case score >= 70:
+          document.write("<h3>C0학점 입니다.</h3>");
+          break;
+        case score >= 60:
+          document.write("<h3>D0학점 입니다.</h3>");
+          break;
+        default:
+          document.write("<h3>F학점 입니다.</h3>");
+      }
+    </script>
+  </body>
+</html>

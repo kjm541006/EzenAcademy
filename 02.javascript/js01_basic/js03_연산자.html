@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      연산자
+
+      1. 사칙연산: +, -, *, /
+      2. 나머지연산: %
+    */
+
+      let a = 10 + 10;
+      console.log(a, typeof a);
+
+      a = a - 5;
+      console.log(a, typeof a);
+
+      a = a * 5;
+      console.log(a, typeof a);
+
+      a = a / 5;
+      console.log(a, typeof a);
+
+      a = a % 6;
+      console.log(a, typeof a);
+
+      const pi = 3.141592;
+      console.log("PI = ", pi, typeof pi);
+
+      let b = 0.1 + 0.2;
+      console.log("실수의 연산은? ", b);
+
+      b = 0.1 * 10 + 0.2 * 10;
+      b = b / 10;
+      console.log("실수의 연산은?", b);
+
+      // 문자와 숫자의 연산 결과는?
+      // 문자열의 연산은 더하기(+)
+      let str = "문자열";
+      let num = 10;
+      let result = str + num;
+      console.log("문자열 연산 결과는? ", result, typeof result);
+
+      // 실습1. 두사람의 나이를 입력받아서 결과를 document.write를 이용해서 출력해 보세요.
+      // prompt, document.write 함수를 이용
+
+      let name1 = prompt("이름을 입력하세요.", "홍길동");
+      let name2 = prompt("이름을 입력하세요.", "홍길순");
+
+      let age1 = parseInt(prompt(`${name1}의 나이를 입력하세요.`, 1));
+      let age2 = parseInt(prompt(`${name2} 나이를 입력하세요.`, 1));
+
+      let sum = age1 + age2;
+      document.write(`<h3>${name1}의 나이 = ${age1}</h3>`);
+      document.write(`<h3>${name2}의 나이 = ${age2}</h3>`);
+      document.write(`<h3>두 사람 나이의 합 = ${sum}</h3>`);
+      document.write("<hr>");
+    </script>
+  </head>
+  <body>
+    <h3 id="person1"></h3>
+    <h3 id="person2"></h3>
+    <h3 id="result"></h3>
+
+    <script>
+      // 실습2. document.querySelector 이용
+
+      let person1 = document.querySelector("#person1");
+      let person2 = document.querySelector("#person2");
+      let total = document.querySelector("#result");
+      person1.innerHTML = `2. ${name1}의 나이 = ${age1}`;
+      person2.innerHTML = `2. ${name2}의 나이 = ${age2}`;
+      total.innerHTML = `2. 두 사람 나이의 합 = ${sum}`;
+    </script>
+  </body>
+</html>

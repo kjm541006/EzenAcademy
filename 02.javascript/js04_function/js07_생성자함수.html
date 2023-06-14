@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        자바스크립트에서 객체를 만드는 방법이 객체리터럴{}(key value 직접 입력), new 객체연산자. Object(), Object.create() 4가지 방법이 있다.
+        그 중에 보통의 경우 객체리터럴과 new 연산자로 객체를 생성한다.
+      */
+      let hong1 = {
+        name: "홍길동",
+        age: 1000,
+      };
+
+      let hong2 = {
+        name: "홍길순",
+        age: 900,
+        sayHello: function () {
+          return `내 이름은 ${this.name} 입니다.`;
+        },
+      };
+
+      function Hong(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayHello = function () {
+          return `내 이름은 ${this.name} 입니다. 나이는 ${this.age}세 입니다.`;
+        };
+      }
+
+      let hong3 = new Hong("홍길성", 700);
+      let hong4 = new Hong("홍길자", 600);
+      let hong5 = new Hong("홍길상", 500);
+
+      console.log(hong1.name, hong1.age);
+      console.log(hong2.name, hong2.age, hong2.sayHello());
+      console.log(hong3.name, hong3.age, hong3.sayHello());
+      console.log(hong4.name, hong4.age, hong4.sayHello());
+      console.log(hong5.name, hong5.age, hong5.sayHello());
+    </script>
+  </body>
+</html>

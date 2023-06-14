@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clock {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        color: #f4f4f4;
+        background-color: #000;
+      }
+      #clock {
+        color: #f0c420;
+        font-size: 20px;
+      }
+      #clockDay {
+        color: mediumaquamarine;
+        font-size: 0.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div id="clock">00:00:00</div>
+      <div id="clockDay">0000/00/00</div>
+    </div>
+
+    <script>
+      function clock() {
+        let date = new Date();
+        let YYYY = date.getFullYear();
+        let MM = fillZero(date.getMonth());
+        let DD = fillZero(date.getDate());
+        let hh = fillZero(date.getHours());
+        let mm = fillZero(date.getMinutes());
+        let ss = fillZero(date.getSeconds());
+        let week = weekday();
+
+        // 요일을 리턴해주는 함수
+        function weekday() {
+          let week = ["일", "월", "화", "수", "목", "금", "토"];
+          let weekday = date.getDay();
+          return week[weekday];
+        }
+
+        // 0을 채워주는 함수
+        function fillZero(num) {
+          return num < 10 ? "0" + num : num;
+        }
+
+        function write(YYYY, MM, DD, hh, mm, ss, week) {
+          let clock = document.querySelector("#clock");
+          let clockDay = document.querySelector("#clockDay");
+
+          clock.innerText = `${hh}:${mm}:${ss}`;
+          clockDay.innerText = `${YYYY}/${MM}/${DD}`;
+        }
+
+        write(YYYY, MM, DD, hh, mm, ss, week);
+      }
+      clock();
+      setInterval(clock, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*
+      증감연산자
+
+      전위
+      ++a: a = a + 1;
+      --a: b = a - 1;
+
+      후위
+      a++: a = a + 1;
+      a--: a = a - 1;
+    */
+
+      let number = 10;
+      number++;
+      console.log(number); //11
+      number--;
+      console.log(number); //10
+
+      console.log("후위연산자(++) =", number++); // 먼저 10을 출력하고 후에 1 증가
+      console.log("전위연산자(++) =", ++number); // 먼저 1을 증가하고 출력
+    </script>
+  </head>
+  <body>
+    <button onclick="counter.innerHTML=++count;">+1</button>
+    <button onclick="counter.innerHTML=--count;">-1</button>
+    <p id="counter">0</p>
+    <script>
+      // 실습. 버튼을 클릭하면 1씩 증가시키는 로직 만들기
+      let count = 0;
+      let counter = document.querySelector("#counter");
+    </script>
+
+    <script>
+      // 실습. 버튼을 클릭하면 1씩 감소시키는 로직 만들기
+    </script>
+  </body>
+</html>

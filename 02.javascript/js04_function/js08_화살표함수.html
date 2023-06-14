@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        화살표함수 (Arrow Function)
+      */
+
+      // 1. 매개변수가 없을 경우
+      let hi = function () {
+        return "안녕하세요";
+      };
+      console.log(hi());
+      hi = () => {
+        return "안녕하세요";
+      };
+      hi = () => "안녕하세요";
+      console.log(hi());
+
+      // 2. 매개변수가 한개만 있을 경우
+      let sayHello = function (name) {
+        return name + "님 안녕하세요(1)?";
+      };
+      sayHello = (name) => name + "님 안녕하세요(2)?";
+      console.log(sayHello("홍길동"));
+
+      // 3. 매개변수가 한개 이상 있을 경우
+      let 더하기 = function (a, b) {
+        return a + b;
+      };
+      더하기 = (a, b) => a + b;
+      console.log(더하기(10, 20));
+    </script>
+  </body>
+</html>

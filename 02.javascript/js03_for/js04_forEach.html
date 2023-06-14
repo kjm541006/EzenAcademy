@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/js04.css" />
+  </head>
+  <body>
+    <script>
+      // forEach: for문과 array
+      // for in : for문과 object
+      // for of : for문과 array
+
+      let arr1 = ["손흥민", "이강인", "김민재", "김연경", "류현진"];
+      console.log(arr1.length);
+
+      for (let i = 0; i < arr1.length; i++) {
+        document.write(`${i} = ${arr1[i]}<br>`);
+      }
+
+      arr1.forEach(function (name, idx) {
+        document.write(`${idx} = ${name}<br>`);
+      });
+
+      // arrow function 사용
+      arr1.forEach((name) => document.write(`${name}<br>`));
+
+      let arr2 = ["⚽️", "🏀", "🏈", "⚾️"];
+      arr2.forEach((x) => document.write(`${x}<br>`));
+
+      // for .. of : for문과 array:
+      for (let i of arr2) {
+        console.log(i);
+      }
+
+      // for .. in : for문과 object:
+      let hong = {
+        name: "홍길동",
+        age: 1000,
+        addr: "조선 한양",
+      };
+      console.log(hong);
+
+      for (key in hong) {
+        document.write(`${key} = ${hong[key]}<br>`);
+      }
+
+      document.write("<hr>");
+      // 실습. 자리배치도
+      // 현재 강의실의 인원 수와 한 줄에 3명씩 앉을 경우 자리 배치도를 출력해보기
+      // if, for(중첩), table,
+
+      let memNum = 16;
+      let colNum = 3;
+
+      if (memNum % colNum == 0) {
+        rowNum = parseInt(memNum / colNum);
+      } else {
+        rowNum = parseInt(memNum / colNum) + 1;
+      }
+      console.log(`총 줄 수 = ${rowNum}`);
+
+      document.write("<table>");
+      for (let i = 0; i < rowNum; i++) {
+        document.write("<tr>");
+        for (let j = 1; j <= colNum; j++) {
+          seatNo = i * colNum + j;
+          if (seatNo > memNum) break;
+          document.write(`<td> 좌석번호 ${seatNo} </td>`);
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+      document.write("<hr>");
+
+      // 구구단
+      let dan, i;
+
+      for (dan = 2; dan <= 9; dan++) {
+        document.write("<div>");
+        document.write(`<h3>${dan} 단</h3>`);
+        for (i = 1; i <= 9; i++) {
+          document.write(`${dan} X ${i} = ${dan * i}<br>`);
+        }
+        document.write("</div>");
+
+        if (dan >= 4) break;
+      }
+    </script>
+  </body>
+</html>

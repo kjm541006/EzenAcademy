@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="fnum" value="20" id="fnum" />
+    <input type="text" name="snum" value="10" id="snum" />
+    <hr />
+    <input type="button" value="+" onclick="add()" />&nbsp;&nbsp; <input type="button" value="-" onclick="sub()" />&nbsp;&nbsp;
+    <input type="button" value="*" onclick="mul()" />&nbsp;&nbsp; <input type="button" value="/" onclick="div()" />&nbsp;&nbsp;
+
+    <div id="result"></div>
+
+    <script>
+      let result = document.querySelector("#result");
+      let add = () => {
+        let num1 = parseInt(document.querySelector("#fnum").value);
+        let num2 = parseInt(document.querySelector("#snum").value);
+        result.innerHTML = `result = ${num1 + num2}`;
+      };
+      let sub = () => {
+        let num1 = parseInt(document.querySelector("#fnum").value);
+        let num2 = parseInt(document.querySelector("#snum").value);
+        result.innerHTML = `result = ${num1 - num2}`;
+      };
+      let mul = () => {
+        let num1 = parseInt(document.querySelector("#fnum").value);
+        let num2 = parseInt(document.querySelector("#snum").value);
+        result.innerHTML = `result = ${num1 * num2}`;
+      };
+      let div = () => {
+        let num1 = parseInt(document.querySelector("#fnum").value);
+        let num2 = parseInt(document.querySelector("#snum").value);
+        result.innerHTML = `result = ${num1 / num2}`;
+      };
+    </script>
+  </body>
+</html>

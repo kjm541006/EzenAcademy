@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input에서 속성 text인 태그의 배경색을 red */
+      /* input에서 속성 password인 태그의 배경색을 blue */
+      input[type="text"] {
+        background-color: red;
+      }
+      input[type="password"] {
+        background-color: blue;
+      }
+      /* 실습 src 속성이
+          jpg일 경우: border 3px solid red
+          png일 경우: border 3px solid blue
+          gif일 경우: border 3px solid green
+
+          $='zzz': zzz로 끝나는
+          ^='zzz': zzz로 시작하는
+       */
+      img[src$="jpg"] {
+        border: 3px solid red;
+      }
+      img[src$="png"] {
+        border: 3px solid blue;
+      }
+      img[src$="gif"] {
+        border: 3px solid green;
+      }
+      img[src^="a"] {
+        border: 10px solid green;
+      }
+      img[src^="ab"] {
+        border: 10px dashed purple;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" /><br />
+    <input type="password" /><br />
+
+    <img src="aaa.jpg" alt="" width="200" height="250" /><br />
+    <img src="abb.png" alt="" width="200" height="250" /><br />
+    <img src="acc.gif" alt="" width="200" height="250" /><br />
+  </body>
+</html>
+
+<!-- dklfjslfjsdalkfjsdfkljsflkjsafkdlsjfslkjfslfjdl -->

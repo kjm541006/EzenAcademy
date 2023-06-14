@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrapper {
+        width: 600px;
+        display: grid;
+        /* 너비가 같은 column 3개 */
+        grid-template-columns: repeat(3, 1fr);
+        /* 행 높이가 최소 100px */
+        grid-template-rows: minmax(100px, auto);
+      }
+      .items {
+        background-color: burlywood;
+        padding: 10px;
+      }
+      .items:nth-child(odd) {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        veritatis
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        veritatis
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        veritatis
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        veritatis
+      </div>
+      <div class="items">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        veritatis
+      </div>
+    </div>
+  </body>
+</html>
